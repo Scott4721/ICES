@@ -1,0 +1,304 @@
+{
+  "info": {
+    "_postman_id": "761a8e52-85a9-4714-8f26-07831690617c",
+    "name": "CLDV6212",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57041534",
+    "_collection_link": "https://go.postman.co/collection/57041534-761a8e52-85a9-4714-8f26-07831690617c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "MenuItems",
+      "item": [
+        {
+          "name": "Get All Items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:7121/api/items",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7121",
+              "path": [
+                "api",
+                "items"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create New",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"id\" : 1,\r\n\"itemName\" : \"Pie\",\r\n\"itemPrice\" : 16\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:7121/api/items",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7121",
+              "path": [
+                "api",
+                "items"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\" : 2,\r\n    \"itemName\" : \"Monsta\",\r\n    \"itemPrice\" : 16\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:7121/api/items?id=2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7121",
+              "path": [
+                "api",
+                "items"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "2",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:7121/api/items?id=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7121",
+              "path": [
+                "api",
+                "items"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "BookRequests",
+      "item": [
+        {
+          "name": "Create A Book",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"PartitionKey\":\"Fiction\",\r\n    \"Title\":\"LOTR\",\r\n    \"Author\":\"Tolkien\",\r\n    \"PublishedYear\":2026\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:7154/api/books",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7154",
+              "path": [
+                "api",
+                "books"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Books By Genre",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:7154/api/books/Fiction",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7154",
+              "path": [
+                "api",
+                "books",
+                "Fiction"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get A Book",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:7154/api/books/Fiction/d7ac4491-4241-495f-81f3-542f9c5eb410",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7154",
+              "path": [
+                "api",
+                "books",
+                "Fiction",
+                "d7ac4491-4241-495f-81f3-542f9c5eb410"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Book",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"PartitionKey\":\"Fiction\",\r\n    \"Title\":\"LOTR\",\r\n    \"Author\":\"Tolkien\",\r\n    \"PublishedYear\":2000\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:7154/api/books/Fiction/d7ac4491-4241-495f-81f3-542f9c5eb410?Year=2000",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7154",
+              "path": [
+                "api",
+                "books",
+                "Fiction",
+                "d7ac4491-4241-495f-81f3-542f9c5eb410"
+              ],
+              "query": [
+                {
+                  "key": "Year",
+                  "value": "2000",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Book",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:7154/api/books/Fiction/d7ac4491-4241-495f-81f3-542f9c5eb410",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "7154",
+              "path": [
+                "api",
+                "books",
+                "Fiction",
+                "d7ac4491-4241-495f-81f3-542f9c5eb410"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7121/api/items?id=2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7121",
+          "path": [
+            "api",
+            "items"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "2",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
