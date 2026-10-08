@@ -1,0 +1,47 @@
+1) "Separation of duties" is important when it comes to administering and using a database.
+
+Define what separation of duties is (in your own words)
+Explain how this relates to the principle of least privilege
+Explain why both are important when it comes to administering a database system 
+
+
+2) Explain, the differences between a flat file styled database, and a relational database.
+
+Include definitions of each
+Compare their differences
+Provide 2 pros, and 2 cons, for each
+
+
+-3) Define the following, in relation to a database - a view. 
+
+a view is like a table that is created using data from other tables
+they are used to display common relationships between tables 
+in a restaurant, a view could be used to illustrate the common relationships between menu items and orders
+
+
+4) PL/SQL blocks consist of three main components.
+
+Define what PL/SQL is
+Explain how it differs from standard SQL
+Explain, in your own words, what each of the three main components are used for
+
+
+
+-5) PL/SQL Cursors make use of attributes. 
+
+It is a list of records
+IMPLICIT is the most recent statement. whereas as explicit is a user defined statement
+
+Provide a use-case scenario of each (you can dream up your own scenario)
+
+
+-6) PL/SQL allows you to create sequences
+
+
+
+A sequence is a value that is incremented each time it is used. 
+
+it can be used to auto generate IDs
+CURRVAL would be used when you want to use the most recent value whereas NEXTVAL is used when you want to use the next value in the sequence
+
+I.E. you would use CURRVAL when you want to update the most recent entry. and NEXTVAL when you want to add a new entry
